@@ -1,0 +1,19 @@
+# Requires Python >=3.10. The detected Python 3.9.6 environment is too old for
+# the current Qiskit 2.x / Qiskit Machine Learning 0.9.x stack.
+
+# Data, visualisation, and classical baselines
+numpy>=1.26,<3
+pandas>=2.2,<3
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+scikit-learn>=1.5,<2
+xgboost>=2.1,<4
+
+# Quantum-kernel experiments (use current primitives-first APIs)
+qiskit==2.3.0
+qiskit-machine-learning==0.9.1
+
+# Notebooks and verification
+jupyterlab>=4.2,<5
+pytest>=8.3,<10
+streamlit>=1.40,<2

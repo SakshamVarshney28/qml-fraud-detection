@@ -1,0 +1,501 @@
+========================================================================
+CONTROLLED QSVM EXPERIMENT
+========================================================================
+Baseline split: 227845 / 56962
+QSVM train: 300 (100 fraud / 200 legit)
+Validation: 550 (50 fraud / 500 legit)
+Final test: 1050 (50 fraud / 1000 legit)
+Selected quantum features: V14, V4, V12, V11
+Quantum circuit: 4 qubits | ZZ reps=1 | entanglement=linear | shots=512
+========================================================================
+
+[TRAIN KERNEL] starting kernel evaluation: 300 x 300
+[TRAIN KERNEL] 10/300 (  3.33%) elapsed=3.7s ETA=1m 47s chunk_time=3.7s
+[TRAIN KERNEL] 20/300 (  6.67%) elapsed=7.3s ETA=1m 43s chunk_time=3.7s
+[TRAIN KERNEL] 30/300 ( 10.00%) elapsed=11.0s ETA=1m 39s chunk_time=3.7s
+[TRAIN KERNEL] 40/300 ( 13.33%) elapsed=14.6s ETA=1m 35s chunk_time=3.6s
+[TRAIN KERNEL] 50/300 ( 16.67%) elapsed=18.3s ETA=1m 31s chunk_time=3.6s
+[TRAIN KERNEL] 60/300 ( 20.00%) elapsed=21.9s ETA=1m 28s chunk_time=3.6s
+[TRAIN KERNEL] 70/300 ( 23.33%) elapsed=25.5s ETA=1m 24s chunk_time=3.6s
+[TRAIN KERNEL] 80/300 ( 26.67%) elapsed=29.2s ETA=1m 20s chunk_time=3.6s
+[TRAIN KERNEL] 90/300 ( 30.00%) elapsed=32.8s ETA=1m 17s chunk_time=3.6s
+[TRAIN KERNEL] 100/300 ( 33.33%) elapsed=36.5s ETA=1m 13s chunk_time=3.6s
+[TRAIN KERNEL] 110/300 ( 36.67%) elapsed=40.1s ETA=1m 9s chunk_time=3.7s
+[TRAIN KERNEL] 120/300 ( 40.00%) elapsed=43.8s ETA=1m 6s chunk_time=3.7s
+[TRAIN KERNEL] 130/300 ( 43.33%) elapsed=47.6s ETA=1m 2s chunk_time=3.7s
+[TRAIN KERNEL] 140/300 ( 46.67%) elapsed=51.2s ETA=58.5s chunk_time=3.7s
+[TRAIN KERNEL] 150/300 ( 50.00%) elapsed=54.9s ETA=54.9s chunk_time=3.7s
+[TRAIN KERNEL] 160/300 ( 53.33%) elapsed=58.7s ETA=51.3s chunk_time=3.8s
+[TRAIN KERNEL] 170/300 ( 56.67%) elapsed=1m 2s ETA=47.8s chunk_time=3.8s
+[TRAIN KERNEL] 180/300 ( 60.00%) elapsed=1m 6s ETA=44.1s chunk_time=3.7s
+[TRAIN KERNEL] 190/300 ( 63.33%) elapsed=1m 10s ETA=40.5s chunk_time=3.7s
+[TRAIN KERNEL] 200/300 ( 66.67%) elapsed=1m 14s ETA=36.8s chunk_time=3.7s
+[TRAIN KERNEL] 210/300 ( 70.00%) elapsed=1m 17s ETA=33.1s chunk_time=3.7s
+[TRAIN KERNEL] 220/300 ( 73.33%) elapsed=1m 21s ETA=29.4s chunk_time=3.7s
+[TRAIN KERNEL] 230/300 ( 76.67%) elapsed=1m 25s ETA=25.7s chunk_time=3.7s
+[TRAIN KERNEL] 240/300 ( 80.00%) elapsed=1m 28s ETA=22.1s chunk_time=3.6s
+[TRAIN KERNEL] 250/300 ( 83.33%) elapsed=1m 32s ETA=18.4s chunk_time=3.7s
+[TRAIN KERNEL] 260/300 ( 86.67%) elapsed=1m 36s ETA=14.7s chunk_time=3.7s
+[TRAIN KERNEL] 270/300 ( 90.00%) elapsed=1m 39s ETA=11.0s chunk_time=3.7s
+[TRAIN KERNEL] 280/300 ( 93.33%) elapsed=1m 43s ETA=7.4s chunk_time=3.7s
+[TRAIN KERNEL] 290/300 ( 96.67%) elapsed=1m 47s ETA=3.7s chunk_time=3.7s
+[TRAIN KERNEL] 300/300 (100.00%) elapsed=1m 50s ETA=0.0s chunk_time=3.8s
+[TRAIN KERNEL] complete in 1m 50s
+
+[VALIDATION KERNEL] starting kernel evaluation: 550 x 300
+[VALIDATION KERNEL] 10/550 (  1.82%) elapsed=3.7s ETA=3m 20s chunk_time=3.7s
+[VALIDATION KERNEL] 20/550 (  3.64%) elapsed=7.4s ETA=3m 15s chunk_time=3.7s
+[VALIDATION KERNEL] 30/550 (  5.45%) elapsed=11.1s ETA=3m 12s chunk_time=3.7s
+[VALIDATION KERNEL] 40/550 (  7.27%) elapsed=14.7s ETA=3m 7s chunk_time=3.6s
+[VALIDATION KERNEL] 50/550 (  9.09%) elapsed=18.3s ETA=3m 3s chunk_time=3.6s
+[VALIDATION KERNEL] 60/550 ( 10.91%) elapsed=22.0s ETA=2m 60s chunk_time=3.7s
+[VALIDATION KERNEL] 70/550 ( 12.73%) elapsed=25.7s ETA=2m 56s chunk_time=3.7s
+[VALIDATION KERNEL] 80/550 ( 14.55%) elapsed=29.4s ETA=2m 53s chunk_time=3.7s
+[VALIDATION KERNEL] 90/550 ( 16.36%) elapsed=33.0s ETA=2m 49s chunk_time=3.7s
+[VALIDATION KERNEL] 100/550 ( 18.18%) elapsed=36.7s ETA=2m 45s chunk_time=3.7s
+[VALIDATION KERNEL] 110/550 ( 20.00%) elapsed=40.4s ETA=2m 42s chunk_time=3.7s
+[VALIDATION KERNEL] 120/550 ( 21.82%) elapsed=44.2s ETA=2m 38s chunk_time=3.7s
+[VALIDATION KERNEL] 130/550 ( 23.64%) elapsed=47.9s ETA=2m 35s chunk_time=3.7s
+[VALIDATION KERNEL] 140/550 ( 25.45%) elapsed=51.6s ETA=2m 31s chunk_time=3.7s
+[VALIDATION KERNEL] 150/550 ( 27.27%) elapsed=55.3s ETA=2m 27s chunk_time=3.7s
+[VALIDATION KERNEL] 160/550 ( 29.09%) elapsed=58.9s ETA=2m 24s chunk_time=3.6s
+[VALIDATION KERNEL] 170/550 ( 30.91%) elapsed=1m 3s ETA=2m 20s chunk_time=3.7s
+[VALIDATION KERNEL] 180/550 ( 32.73%) elapsed=1m 6s ETA=2m 16s chunk_time=3.6s
+[VALIDATION KERNEL] 190/550 ( 34.55%) elapsed=1m 10s ETA=2m 12s chunk_time=3.6s
+[VALIDATION KERNEL] 200/550 ( 36.36%) elapsed=1m 13s ETA=2m 9s chunk_time=3.6s
+[VALIDATION KERNEL] 210/550 ( 38.18%) elapsed=1m 17s ETA=2m 5s chunk_time=3.6s
+[VALIDATION KERNEL] 220/550 ( 40.00%) elapsed=1m 21s ETA=2m 1s chunk_time=3.6s
+[VALIDATION KERNEL] 230/550 ( 41.82%) elapsed=1m 24s ETA=1m 57s chunk_time=3.7s
+[VALIDATION KERNEL] 240/550 ( 43.64%) elapsed=1m 28s ETA=1m 54s chunk_time=3.7s
+[VALIDATION KERNEL] 250/550 ( 45.45%) elapsed=1m 32s ETA=1m 50s chunk_time=3.6s
+[VALIDATION KERNEL] 260/550 ( 47.27%) elapsed=1m 35s ETA=1m 46s chunk_time=3.6s
+[VALIDATION KERNEL] 270/550 ( 49.09%) elapsed=1m 39s ETA=1m 43s chunk_time=3.7s
+[VALIDATION KERNEL] 280/550 ( 50.91%) elapsed=1m 43s ETA=1m 39s chunk_time=3.6s
+[VALIDATION KERNEL] 290/550 ( 52.73%) elapsed=1m 46s ETA=1m 35s chunk_time=3.7s
+[VALIDATION KERNEL] 300/550 ( 54.55%) elapsed=1m 50s ETA=1m 32s chunk_time=3.7s
+[VALIDATION KERNEL] 310/550 ( 56.36%) elapsed=1m 54s ETA=1m 28s chunk_time=3.7s
+[VALIDATION KERNEL] 320/550 ( 58.18%) elapsed=1m 58s ETA=1m 24s chunk_time=3.7s
+[VALIDATION KERNEL] 330/550 ( 60.00%) elapsed=2m 1s ETA=1m 21s chunk_time=3.6s
+[VALIDATION KERNEL] 340/550 ( 61.82%) elapsed=2m 5s ETA=1m 17s chunk_time=3.7s
+[VALIDATION KERNEL] 350/550 ( 63.64%) elapsed=2m 8s ETA=1m 13s chunk_time=3.6s
+[VALIDATION KERNEL] 360/550 ( 65.45%) elapsed=2m 12s ETA=1m 10s chunk_time=3.6s
+[VALIDATION KERNEL] 370/550 ( 67.27%) elapsed=2m 16s ETA=1m 6s chunk_time=3.6s
+[VALIDATION KERNEL] 380/550 ( 69.09%) elapsed=2m 19s ETA=1m 2s chunk_time=3.6s
+[VALIDATION KERNEL] 390/550 ( 70.91%) elapsed=2m 23s ETA=58.7s chunk_time=3.7s
+[VALIDATION KERNEL] 400/550 ( 72.73%) elapsed=2m 27s ETA=55.0s chunk_time=3.6s
+[VALIDATION KERNEL] 410/550 ( 74.55%) elapsed=2m 30s ETA=51.3s chunk_time=3.6s
+[VALIDATION KERNEL] 420/550 ( 76.36%) elapsed=2m 34s ETA=47.7s chunk_time=3.6s
+[VALIDATION KERNEL] 430/550 ( 78.18%) elapsed=2m 38s ETA=44.0s chunk_time=3.6s
+[VALIDATION KERNEL] 440/550 ( 80.00%) elapsed=2m 41s ETA=40.3s chunk_time=3.6s
+[VALIDATION KERNEL] 450/550 ( 81.82%) elapsed=2m 45s ETA=36.6s chunk_time=3.6s
+[VALIDATION KERNEL] 460/550 ( 83.64%) elapsed=2m 49s ETA=33.0s chunk_time=3.6s
+[VALIDATION KERNEL] 470/550 ( 85.45%) elapsed=2m 52s ETA=29.3s chunk_time=3.6s
+[VALIDATION KERNEL] 480/550 ( 87.27%) elapsed=2m 56s ETA=25.6s chunk_time=3.6s
+[VALIDATION KERNEL] 490/550 ( 89.09%) elapsed=2m 59s ETA=22.0s chunk_time=3.6s
+[VALIDATION KERNEL] 500/550 ( 90.91%) elapsed=3m 3s ETA=18.3s chunk_time=3.6s
+[VALIDATION KERNEL] 510/550 ( 92.73%) elapsed=3m 7s ETA=14.6s chunk_time=3.7s
+[VALIDATION KERNEL] 520/550 ( 94.55%) elapsed=3m 10s ETA=11.0s chunk_time=3.6s
+[VALIDATION KERNEL] 530/550 ( 96.36%) elapsed=3m 14s ETA=7.3s chunk_time=3.6s
+[VALIDATION KERNEL] 540/550 ( 98.18%) elapsed=3m 18s ETA=3.7s chunk_time=3.6s
+[VALIDATION KERNEL] 550/550 (100.00%) elapsed=3m 21s ETA=0.0s chunk_time=3.6s
+[VALIDATION KERNEL] complete in 3m 21s
+
+VALIDATION C SEARCH
+------------------------------------------------------------------------
+C=0.001   PR-AUC=0.097907 ROC-AUC=0.539000 F1=0.130178
+C=0.01    PR-AUC=0.097908 ROC-AUC=0.539040 F1=0.130178
+C=0.1     PR-AUC=0.097905 ROC-AUC=0.539000 F1=0.130178
+C=1       PR-AUC=0.102220 ROC-AUC=0.548480 F1=0.166667
+C=10      PR-AUC=0.102158 ROC-AUC=0.529680 F1=0.146179
+C=100     PR-AUC=0.098184 ROC-AUC=0.523320 F1=0.167247
+
+Selected C based ONLY on validation PR-AUC: 1.0
+
+[FINAL TEST KERNEL] starting kernel evaluation: 1050 x 300
+[FINAL TEST KERNEL] 10/1050 (  0.95%) elapsed=3.7s ETA=6m 20s chunk_time=3.7s
+[FINAL TEST KERNEL] 20/1050 (  1.90%) elapsed=7.3s ETA=6m 15s chunk_time=3.6s
+[FINAL TEST KERNEL] 30/1050 (  2.86%) elapsed=10.9s ETA=6m 11s chunk_time=3.6s
+[FINAL TEST KERNEL] 40/1050 (  3.81%) elapsed=14.5s ETA=6m 7s chunk_time=3.6s
+[FINAL TEST KERNEL] 50/1050 (  4.76%) elapsed=18.2s ETA=6m 3s chunk_time=3.6s
+[FINAL TEST KERNEL] 60/1050 (  5.71%) elapsed=21.8s ETA=5m 60s chunk_time=3.6s
+[FINAL TEST KERNEL] 70/1050 (  6.67%) elapsed=25.4s ETA=5m 56s chunk_time=3.6s
+[FINAL TEST KERNEL] 80/1050 (  7.62%) elapsed=29.1s ETA=5m 53s chunk_time=3.6s
+[FINAL TEST KERNEL] 90/1050 (  8.57%) elapsed=32.7s ETA=5m 49s chunk_time=3.6s
+[FINAL TEST KERNEL] 100/1050 (  9.52%) elapsed=36.3s ETA=5m 45s chunk_time=3.6s
+[FINAL TEST KERNEL] 110/1050 ( 10.48%) elapsed=39.9s ETA=5m 41s chunk_time=3.6s
+[FINAL TEST KERNEL] 120/1050 ( 11.43%) elapsed=43.6s ETA=5m 38s chunk_time=3.6s
+[FINAL TEST KERNEL] 130/1050 ( 12.38%) elapsed=47.2s ETA=5m 34s chunk_time=3.6s
+[FINAL TEST KERNEL] 140/1050 ( 13.33%) elapsed=51.0s ETA=5m 31s chunk_time=3.7s
+[FINAL TEST KERNEL] 150/1050 ( 14.29%) elapsed=54.7s ETA=5m 28s chunk_time=3.8s
+[FINAL TEST KERNEL] 160/1050 ( 15.24%) elapsed=58.5s ETA=5m 25s chunk_time=3.7s
+[FINAL TEST KERNEL] 170/1050 ( 16.19%) elapsed=1m 2s ETA=5m 22s chunk_time=3.6s
+[FINAL TEST KERNEL] 180/1050 ( 17.14%) elapsed=1m 6s ETA=5m 18s chunk_time=3.6s
+[FINAL TEST KERNEL] 190/1050 ( 18.10%) elapsed=1m 9s ETA=5m 14s chunk_time=3.7s
+[FINAL TEST KERNEL] 200/1050 ( 19.05%) elapsed=1m 13s ETA=5m 11s chunk_time=3.8s
+[FINAL TEST KERNEL] 210/1050 ( 20.00%) elapsed=1m 17s ETA=5m 8s chunk_time=3.8s
+[FINAL TEST KERNEL] 220/1050 ( 20.95%) elapsed=1m 21s ETA=5m 4s chunk_time=3.6s
+[FINAL TEST KERNEL] 230/1050 ( 21.90%) elapsed=1m 24s ETA=5m 1s chunk_time=3.7s
+[FINAL TEST KERNEL] 240/1050 ( 22.86%) elapsed=1m 28s ETA=4m 57s chunk_time=3.6s
+[FINAL TEST KERNEL] 250/1050 ( 23.81%) elapsed=1m 32s ETA=4m 53s chunk_time=3.6s
+[FINAL TEST KERNEL] 260/1050 ( 24.76%) elapsed=1m 35s ETA=4m 49s chunk_time=3.7s
+[FINAL TEST KERNEL] 270/1050 ( 25.71%) elapsed=1m 39s ETA=4m 46s chunk_time=3.6s
+[FINAL TEST KERNEL] 280/1050 ( 26.67%) elapsed=1m 43s ETA=4m 42s chunk_time=3.7s
+[FINAL TEST KERNEL] 290/1050 ( 27.62%) elapsed=1m 46s ETA=4m 38s chunk_time=3.6s
+[FINAL TEST KERNEL] 300/1050 ( 28.57%) elapsed=1m 50s ETA=4m 34s chunk_time=3.6s
+[FINAL TEST KERNEL] 310/1050 ( 29.52%) elapsed=1m 53s ETA=4m 31s chunk_time=3.7s
+[FINAL TEST KERNEL] 320/1050 ( 30.48%) elapsed=1m 57s ETA=4m 27s chunk_time=3.8s
+[FINAL TEST KERNEL] 330/1050 ( 31.43%) elapsed=2m 1s ETA=4m 24s chunk_time=3.6s
+[FINAL TEST KERNEL] 340/1050 ( 32.38%) elapsed=2m 4s ETA=4m 20s chunk_time=3.6s
+[FINAL TEST KERNEL] 350/1050 ( 33.33%) elapsed=2m 8s ETA=4m 16s chunk_time=3.6s
+[FINAL TEST KERNEL] 360/1050 ( 34.29%) elapsed=2m 12s ETA=4m 12s chunk_time=3.6s
+[FINAL TEST KERNEL] 370/1050 ( 35.24%) elapsed=2m 15s ETA=4m 9s chunk_time=3.6s
+[FINAL TEST KERNEL] 380/1050 ( 36.19%) elapsed=2m 19s ETA=4m 5s chunk_time=3.6s
+[FINAL TEST KERNEL] 390/1050 ( 37.14%) elapsed=2m 23s ETA=4m 1s chunk_time=3.6s
+[FINAL TEST KERNEL] 400/1050 ( 38.10%) elapsed=2m 26s ETA=3m 58s chunk_time=3.6s
+[FINAL TEST KERNEL] 410/1050 ( 39.05%) elapsed=2m 30s ETA=3m 54s chunk_time=3.6s
+[FINAL TEST KERNEL] 420/1050 ( 40.00%) elapsed=2m 34s ETA=3m 50s chunk_time=3.7s
+[FINAL TEST KERNEL] 430/1050 ( 40.95%) elapsed=2m 37s ETA=3m 47s chunk_time=3.6s
+[FINAL TEST KERNEL] 440/1050 ( 41.90%) elapsed=2m 41s ETA=3m 43s chunk_time=3.6s
+[FINAL TEST KERNEL] 450/1050 ( 42.86%) elapsed=2m 45s ETA=3m 39s chunk_time=3.7s
+[FINAL TEST KERNEL] 460/1050 ( 43.81%) elapsed=2m 48s ETA=3m 36s chunk_time=3.7s
+[FINAL TEST KERNEL] 470/1050 ( 44.76%) elapsed=2m 52s ETA=3m 32s chunk_time=3.7s
+[FINAL TEST KERNEL] 480/1050 ( 45.71%) elapsed=2m 56s ETA=3m 29s chunk_time=3.7s
+[FINAL TEST KERNEL] 490/1050 ( 46.67%) elapsed=2m 59s ETA=3m 25s chunk_time=3.7s
+[FINAL TEST KERNEL] 500/1050 ( 47.62%) elapsed=3m 3s ETA=3m 21s chunk_time=3.6s
+[FINAL TEST KERNEL] 510/1050 ( 48.57%) elapsed=3m 7s ETA=3m 18s chunk_time=3.6s
+[FINAL TEST KERNEL] 520/1050 ( 49.52%) elapsed=3m 10s ETA=3m 14s chunk_time=3.6s
+[FINAL TEST KERNEL] 530/1050 ( 50.48%) elapsed=3m 14s ETA=3m 10s chunk_time=3.6s
+[FINAL TEST KERNEL] 540/1050 ( 51.43%) elapsed=3m 17s ETA=3m 6s chunk_time=3.6s
+[FINAL TEST KERNEL] 550/1050 ( 52.38%) elapsed=3m 21s ETA=3m 3s chunk_time=3.6s
+[FINAL TEST KERNEL] 560/1050 ( 53.33%) elapsed=3m 25s ETA=2m 59s chunk_time=3.7s
+[FINAL TEST KERNEL] 570/1050 ( 54.29%) elapsed=3m 28s ETA=2m 55s chunk_time=3.7s
+[FINAL TEST KERNEL] 580/1050 ( 55.24%) elapsed=3m 32s ETA=2m 52s chunk_time=3.6s
+[FINAL TEST KERNEL] 590/1050 ( 56.19%) elapsed=3m 36s ETA=2m 48s chunk_time=3.7s
+[FINAL TEST KERNEL] 600/1050 ( 57.14%) elapsed=3m 39s ETA=2m 45s chunk_time=3.7s
+[FINAL TEST KERNEL] 610/1050 ( 58.10%) elapsed=3m 43s ETA=2m 41s chunk_time=3.7s
+[FINAL TEST KERNEL] 620/1050 ( 59.05%) elapsed=3m 47s ETA=2m 37s chunk_time=3.7s
+[FINAL TEST KERNEL] 630/1050 ( 60.00%) elapsed=3m 51s ETA=2m 34s chunk_time=3.7s
+[FINAL TEST KERNEL] 640/1050 ( 60.95%) elapsed=3m 54s ETA=2m 30s chunk_time=3.6s
+[FINAL TEST KERNEL] 650/1050 ( 61.90%) elapsed=3m 58s ETA=2m 26s chunk_time=3.7s
+[FINAL TEST KERNEL] 660/1050 ( 62.86%) elapsed=4m 1s ETA=2m 23s chunk_time=3.6s
+[FINAL TEST KERNEL] 670/1050 ( 63.81%) elapsed=4m 5s ETA=2m 19s chunk_time=3.6s
+[FINAL TEST KERNEL] 680/1050 ( 64.76%) elapsed=4m 9s ETA=2m 15s chunk_time=3.6s
+[FINAL TEST KERNEL] 690/1050 ( 65.71%) elapsed=4m 12s ETA=2m 12s chunk_time=3.6s
+[FINAL TEST KERNEL] 700/1050 ( 66.67%) elapsed=4m 16s ETA=2m 8s chunk_time=3.6s
+[FINAL TEST KERNEL] 710/1050 ( 67.62%) elapsed=4m 20s ETA=2m 4s chunk_time=3.7s
+[FINAL TEST KERNEL] 720/1050 ( 68.57%) elapsed=4m 23s ETA=2m 1s chunk_time=3.7s
+[FINAL TEST KERNEL] 730/1050 ( 69.52%) elapsed=4m 27s ETA=1m 57s chunk_time=3.6s
+[FINAL TEST KERNEL] 740/1050 ( 70.48%) elapsed=4m 31s ETA=1m 53s chunk_time=3.7s
+[FINAL TEST KERNEL] 750/1050 ( 71.43%) elapsed=4m 34s ETA=1m 50s chunk_time=3.8s
+[FINAL TEST KERNEL] 760/1050 ( 72.38%) elapsed=4m 38s ETA=1m 46s chunk_time=3.7s
+[FINAL TEST KERNEL] 770/1050 ( 73.33%) elapsed=4m 42s ETA=1m 42s chunk_time=3.6s
+[FINAL TEST KERNEL] 780/1050 ( 74.29%) elapsed=4m 45s ETA=1m 39s chunk_time=3.6s
+[FINAL TEST KERNEL] 790/1050 ( 75.24%) elapsed=4m 49s ETA=1m 35s chunk_time=3.6s
+[FINAL TEST KERNEL] 800/1050 ( 76.19%) elapsed=4m 53s ETA=1m 31s chunk_time=3.7s
+[FINAL TEST KERNEL] 810/1050 ( 77.14%) elapsed=4m 56s ETA=1m 28s chunk_time=3.8s
+[FINAL TEST KERNEL] 820/1050 ( 78.10%) elapsed=5m 0s ETA=1m 24s chunk_time=3.8s
+[FINAL TEST KERNEL] 830/1050 ( 79.05%) elapsed=5m 4s ETA=1m 21s chunk_time=3.6s
+[FINAL TEST KERNEL] 840/1050 ( 80.00%) elapsed=5m 7s ETA=1m 17s chunk_time=3.6s
+[FINAL TEST KERNEL] 850/1050 ( 80.95%) elapsed=5m 11s ETA=1m 13s chunk_time=3.6s
+[FINAL TEST KERNEL] 860/1050 ( 81.90%) elapsed=5m 15s ETA=1m 10s chunk_time=3.6s
+[FINAL TEST KERNEL] 870/1050 ( 82.86%) elapsed=5m 19s ETA=1m 6s chunk_time=3.9s
+[FINAL TEST KERNEL] 880/1050 ( 83.81%) elapsed=5m 22s ETA=1m 2s chunk_time=3.8s
+[FINAL TEST KERNEL] 890/1050 ( 84.76%) elapsed=5m 26s ETA=58.6s chunk_time=3.6s
+[FINAL TEST KERNEL] 900/1050 ( 85.71%) elapsed=5m 30s ETA=54.9s chunk_time=3.6s
+[FINAL TEST KERNEL] 910/1050 ( 86.67%) elapsed=5m 33s ETA=51.3s chunk_time=3.7s
+[FINAL TEST KERNEL] 920/1050 ( 87.62%) elapsed=5m 37s ETA=47.6s chunk_time=3.7s
+[FINAL TEST KERNEL] 930/1050 ( 88.57%) elapsed=5m 41s ETA=44.0s chunk_time=4.1s
+[FINAL TEST KERNEL] 940/1050 ( 89.52%) elapsed=5m 45s ETA=40.4s chunk_time=3.8s
+[FINAL TEST KERNEL] 950/1050 ( 90.48%) elapsed=5m 49s ETA=36.7s chunk_time=3.8s
+[FINAL TEST KERNEL] 960/1050 ( 91.43%) elapsed=5m 52s ETA=33.0s chunk_time=3.7s
+[FINAL TEST KERNEL] 970/1050 ( 92.38%) elapsed=5m 56s ETA=29.4s chunk_time=3.6s
+[FINAL TEST KERNEL] 980/1050 ( 93.33%) elapsed=5m 60s ETA=25.7s chunk_time=3.6s
+[FINAL TEST KERNEL] 990/1050 ( 94.29%) elapsed=6m 3s ETA=22.0s chunk_time=3.6s
+[FINAL TEST KERNEL] 1000/1050 ( 95.24%) elapsed=6m 7s ETA=18.4s chunk_time=4.1s
+[FINAL TEST KERNEL] 1010/1050 ( 96.19%) elapsed=6m 11s ETA=14.7s chunk_time=3.8s
+[FINAL TEST KERNEL] 1020/1050 ( 97.14%) elapsed=6m 15s ETA=11.0s chunk_time=3.7s
+[FINAL TEST KERNEL] 1030/1050 ( 98.10%) elapsed=6m 19s ETA=7.4s chunk_time=3.7s
+[FINAL TEST KERNEL] 1040/1050 ( 99.05%) elapsed=6m 22s ETA=3.7s chunk_time=3.7s
+[FINAL TEST KERNEL] 1050/1050 (100.00%) elapsed=6m 26s ETA=0.0s chunk_time=3.6s
+[FINAL TEST KERNEL] complete in 6m 26s
+
+========================================================================
+FINAL QSVM TEST RESULTS
+========================================================================
+PR_AUC                  : 0.04689591013192611
+ROC_AUC                 : 0.46146000000000004
+PRECISION               : 0.042105263157894736
+RECALL                  : 0.4
+F1                      : 0.0761904761904762
+SPECIFICITY             : 0.545
+FALSE_POSITIVE_RATE     : 0.455
+========================================================================
+{
+  "experiment": "qsvm_controlled_validation_experiment",
+  "status": "completed",
+  "model": {
+    "name": "QSVM",
+    "implementation": "precomputed-kernel SVC using Qiskit FidelityQuantumKernel",
+    "classifier": "SVC(kernel='precomputed')",
+    "class_weight": "balanced",
+    "selected_C": 1.0
+  },
+  "protocol": {
+    "primary_metric": "PR-AUC (average precision)",
+    "random_state": 42,
+    "hyperparameter_selection": "highest validation PR-AUC",
+    "final_test_used_for_selection": false,
+    "feature_selection_fit_scope": "QSVM training subset only",
+    "baseline_split": "80/20 stratified random split, random_state=42",
+    "final_test_source": "baseline held-out X_test subset"
+  },
+  "feature_reduction": {
+    "method": "training-only ANOVA F-score selector",
+    "feature_count": 4,
+    "selected_features": [
+      "V14",
+      "V4",
+      "V12",
+      "V11"
+    ],
+    "feature_scores": {
+      "Time": 5.528187612354493,
+      "V1": 83.22813088968007,
+      "V2": 124.50600842464982,
+      "V3": 141.7022469960656,
+      "V4": 292.10843208861866,
+      "V5": 52.28396195247169,
+      "V6": 49.10989121196859,
+      "V7": 92.5589838770129,
+      "V8": 1.6924252057549192,
+      "V9": 132.13827723360993,
+      "V10": 219.1337117001823,
+      "V11": 233.58690922795597,
+      "V12": 259.928132099732,
+      "V13": 0.08926705951810535,
+      "V14": 370.6062756592718,
+      "V15": 0.5448370432551846,
+      "V16": 196.31596450923382,
+      "V17": 168.48295537899966,
+      "V18": 111.67045805460248,
+      "V19": 16.91318553489068,
+      "V20": 14.058521239938862,
+      "V21": 0.02569296554395423,
+      "V22": 10.35163998524761,
+      "V23": 2.2421742950835664,
+      "V24": 1.8004583113002004,
+      "V25": 0.5825484276171106,
+      "V26": 0.18597583284408575,
+      "V27": 6.091020049412355,
+      "V28": 0.009980799483143964,
+      "Amount": 1.3544445034463763
+    }
+  },
+  "quantum_configuration": {
+    "feature_count": 4,
+    "qubit_count": 4,
+    "feature_map": "zz_feature_map",
+    "feature_map_reps": 1,
+    "feature_map_entanglement": "linear",
+    "sampler": "StatevectorSampler",
+    "fidelity_implementation": "ComputeUncompute",
+    "kernel_type": "FidelityQuantumKernel",
+    "shots": 512
+  },
+  "datasets": {
+    "qsvm_training": {
+      "rows": 300,
+      "class_distribution": {
+        "0": 200,
+        "1": 100
+      }
+    },
+    "validation": {
+      "rows": 550,
+      "class_distribution": {
+        "0": 500,
+        "1": 50
+      }
+    },
+    "final_test": {
+      "rows": 1050,
+      "class_distribution": {
+        "0": 1000,
+        "1": 50
+      }
+    }
+  },
+  "validation_search": [
+    {
+      "C": 0.001,
+      "validation_metrics": {
+        "pr_auc": 0.09790666162472543,
+        "roc_auc": 0.5389999999999999,
+        "precision": 0.09243697478991597,
+        "recall": 0.22,
+        "f1": 0.1301775147928994,
+        "specificity": 0.784,
+        "false_positive_rate": 0.216,
+        "confusion_matrix": {
+          "true_negative": 392,
+          "false_positive": 108,
+          "false_negative": 39,
+          "true_positive": 11
+        }
+      },
+      "training_time_seconds": 0.0018812920316122472
+    },
+    {
+      "C": 0.01,
+      "validation_metrics": {
+        "pr_auc": 0.09790798977111455,
+        "roc_auc": 0.53904,
+        "precision": 0.09243697478991597,
+        "recall": 0.22,
+        "f1": 0.1301775147928994,
+        "specificity": 0.784,
+        "false_positive_rate": 0.216,
+        "confusion_matrix": {
+          "true_negative": 392,
+          "false_positive": 108,
+          "false_negative": 39,
+          "true_positive": 11
+        }
+      },
+      "training_time_seconds": 0.0008757089963182807
+    },
+    {
+      "C": 0.1,
+      "validation_metrics": {
+        "pr_auc": 0.0979047352986093,
+        "roc_auc": 0.5389999999999999,
+        "precision": 0.09243697478991597,
+        "recall": 0.22,
+        "f1": 0.1301775147928994,
+        "specificity": 0.784,
+        "false_positive_rate": 0.216,
+        "confusion_matrix": {
+          "true_negative": 392,
+          "false_positive": 108,
+          "false_negative": 39,
+          "true_positive": 11
+        }
+      },
+      "training_time_seconds": 0.0008552910294383764
+    },
+    {
+      "C": 1.0,
+      "validation_metrics": {
+        "pr_auc": 0.10221966009793151,
+        "roc_auc": 0.54848,
+        "precision": 0.10176991150442478,
+        "recall": 0.46,
+        "f1": 0.16666666666666666,
+        "specificity": 0.594,
+        "false_positive_rate": 0.406,
+        "confusion_matrix": {
+          "true_negative": 297,
+          "false_positive": 203,
+          "false_negative": 27,
+          "true_positive": 23
+        }
+      },
+      "training_time_seconds": 0.0008038749801926315
+    },
+    {
+      "C": 10.0,
+      "validation_metrics": {
+        "pr_auc": 0.10215762414754959,
+        "roc_auc": 0.52968,
+        "precision": 0.08764940239043825,
+        "recall": 0.44,
+        "f1": 0.1461794019933555,
+        "specificity": 0.542,
+        "false_positive_rate": 0.458,
+        "confusion_matrix": {
+          "true_negative": 271,
+          "false_positive": 229,
+          "false_negative": 28,
+          "true_positive": 22
+        }
+      },
+      "training_time_seconds": 0.002944250009022653
+    },
+    {
+      "C": 100.0,
+      "validation_metrics": {
+        "pr_auc": 0.09818369923149431,
+        "roc_auc": 0.52332,
+        "precision": 0.10126582278481013,
+        "recall": 0.48,
+        "f1": 0.1672473867595819,
+        "specificity": 0.574,
+        "false_positive_rate": 0.426,
+        "confusion_matrix": {
+          "true_negative": 287,
+          "false_positive": 213,
+          "false_negative": 26,
+          "true_positive": 24
+        }
+      },
+      "training_time_seconds": 0.008595250023063272
+    }
+  ],
+  "selected_C": 1.0,
+  "final_test_metrics": {
+    "pr_auc": 0.04689591013192611,
+    "roc_auc": 0.46146000000000004,
+    "precision": 0.042105263157894736,
+    "recall": 0.4,
+    "f1": 0.0761904761904762,
+    "specificity": 0.545,
+    "false_positive_rate": 0.455,
+    "confusion_matrix": {
+      "true_negative": 545,
+      "false_positive": 455,
+      "false_negative": 30,
+      "true_positive": 20
+    }
+  },
+  "timing_seconds": {
+    "kernel_construction": 0.0009343749843537807,
+    "training_kernel": 110.41191320796497,
+    "validation_kernel": 201.32626145798713,
+    "final_test_kernel": 385.8606981659541,
+    "final_svm_fit": 0.0008110419730655849,
+    "total_runtime": 699.0902177499956
+  },
+  "kernel_shapes": {
+    "training": [
+      300,
+      300
+    ],
+    "validation": [
+      550,
+      300
+    ],
+    "final_test": [
+      1050,
+      300
+    ]
+  },
+  "figure_files": {
+    "pr_curve": "results/figures/qsvm/01_pr_curve.png",
+    "roc_curve": "results/figures/qsvm/02_roc_curve.png",
+    "confusion_matrix": "results/figures/qsvm/03_confusion_matrix.png",
+    "quantum_kernel_matrix": "results/figures/qsvm/04_quantum_kernel_matrix.png",
+    "quantum_feature_map": "results/figures/qsvm/05_quantum_feature_map.txt",
+    "validation_c_comparison": "results/figures/qsvm/06_validation_c_comparison.png",
+    "validation_pr_curves": "results/figures/qsvm/07_validation_pr_curves.png"
+  },
+  "prediction_file": "results/json/qsvm_predictions.json",
+  "notes": [
+    "This replaces the earlier preliminary QSVM sanity-check experiment.",
+    "The QSVM training and validation subsets are disjoint.",
+    "Feature selection is fitted only on the QSVM training subset.",
+    "The final test subset comes only from the baseline held-out test partition.",
+    "The final test labels are not used to select hyperparameters.",
+    "The final test subset contains 50 fraud and 1000 legitimate transactions, so it is a controlled held-out subset rather than the entire classical 56,962-row test partition.",
+    "The quantum kernel is noiseless StatevectorSampler simulation."
+  ]
+}

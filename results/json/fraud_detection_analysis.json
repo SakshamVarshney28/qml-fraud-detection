@@ -1,0 +1,103 @@
+{
+  "analysis_scope": "Full 56,962-row classical held-out baseline test set",
+  "prediction_source": "results/json/classical_test_predictions.json",
+  "threshold_policy": "Native model predictions; no threshold selected using test labels.",
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "total_test_transactions": 56962,
+      "actual_frauds": 98,
+      "actual_legitimate": 56864,
+      "predicted_frauds": 1476,
+      "predicted_legitimate": 55486,
+      "TP": 90,
+      "FP": 1386,
+      "FN": 8,
+      "TN": 55478,
+      "precision": 0.06097560975609756,
+      "recall": 0.9183673469387755,
+      "F1": 0.11435832274459974,
+      "PR-AUC": 0.7189705771419241,
+      "ROC-AUC": 0.9720834996210077,
+      "specificity": 0.9756260551491277,
+      "FPR": 0.024373944850872256
+    },
+    {
+      "model": "RBF-SVM",
+      "total_test_transactions": 56962,
+      "actual_frauds": 98,
+      "actual_legitimate": 56864,
+      "predicted_frauds": 230,
+      "predicted_legitimate": 56732,
+      "TP": 74,
+      "FP": 156,
+      "FN": 24,
+      "TN": 56708,
+      "precision": 0.3217391304347826,
+      "recall": 0.7551020408163265,
+      "F1": 0.45121951219512196,
+      "PR-AUC": 0.4777797521079116,
+      "ROC-AUC": 0.9731911370344424,
+      "specificity": 0.9972566122678672,
+      "FPR": 0.0027433877321328083
+    },
+    {
+      "model": "XGBoost",
+      "total_test_transactions": 56962,
+      "actual_frauds": 98,
+      "actual_legitimate": 56864,
+      "predicted_frauds": 95,
+      "predicted_legitimate": 56867,
+      "TP": 83,
+      "FP": 12,
+      "FN": 15,
+      "TN": 56852,
+      "precision": 0.8736842105263158,
+      "recall": 0.8469387755102041,
+      "F1": 0.8601036269430051,
+      "PR-AUC": 0.8888909148075554,
+      "ROC-AUC": 0.9786806042056666,
+      "specificity": 0.9997889701744513,
+      "FPR": 0.00021102982554867754
+    }
+  ],
+  "fraud_detection_table": [
+    {
+      "model": "Logistic Regression",
+      "frauds actually present": 98,
+      "frauds detected": 90,
+      "frauds missed": 8,
+      "fraud detection recall": 0.9183673469387755,
+      "legitimate transactions falsely flagged": 1386
+    },
+    {
+      "model": "RBF-SVM",
+      "frauds actually present": 98,
+      "frauds detected": 74,
+      "frauds missed": 24,
+      "fraud detection recall": 0.7551020408163265,
+      "legitimate transactions falsely flagged": 156
+    },
+    {
+      "model": "XGBoost",
+      "frauds actually present": 98,
+      "frauds detected": 83,
+      "frauds missed": 15,
+      "fraud detection recall": 0.8469387755102041,
+      "legitimate transactions falsely flagged": 12
+    }
+  ],
+  "representative_transactions_file": "results/tables/representative_heldout_transactions.csv",
+  "figures": [
+    "fraud_detected_missed.png",
+    "legitimate_transactions_flagged.png",
+    "logistic_regression_confusion_matrix.png",
+    "rbf_svm_confusion_matrix.png",
+    "xgboost_confusion_matrix.png"
+  ],
+  "limitations": [
+    "Uses existing native prediction rules; no threshold optimization.",
+    "Representative rows are held-out examples and do not prove general performance.",
+    "This analysis does not retrain models."
+  ]
+}

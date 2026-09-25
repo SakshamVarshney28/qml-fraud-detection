@@ -1,0 +1,105 @@
+{
+  "experiment": "small_noiseless_qsvc_sanity_check",
+  "status": "completed",
+  "architecture": [
+    "4 classical features",
+    "4 qubits",
+    "zz_feature_map",
+    "FidelityQuantumKernel",
+    "QSVC"
+  ],
+  "reproducibility": {
+    "random_state": 42,
+    "sampler_shots": 1024,
+    "training_subset_selection": "stratified subset from baseline X_train only",
+    "test_subset_selection": "class-balanced subset from baseline X_test only",
+    "baseline_split": "80/20 stratified random split, random_state=42"
+  },
+  "feature_reduction": {
+    "method": "training-only ANOVA F-score selector",
+    "feature_count": 4,
+    "selected_features": [
+      "V17",
+      "V14",
+      "V12",
+      "V10"
+    ],
+    "training_rows_before_subset": 227845,
+    "test_rows": 56962
+  },
+  "quantum_configuration": {
+    "feature_count": 4,
+    "qubit_count": 4,
+    "feature_map": "zz_feature_map",
+    "feature_map_reps": 1,
+    "feature_map_entanglement": "linear",
+    "feature_map_parameters": [
+      "x[0]",
+      "x[1]",
+      "x[2]",
+      "x[3]"
+    ],
+    "kernel_type": "FidelityQuantumKernel",
+    "fidelity_implementation": "ComputeUncompute",
+    "sampler": "StatevectorSampler",
+    "shots": 1024
+  },
+  "training_subset": {
+    "selection": "stratified subset selected from existing baseline training split",
+    "rows_used": 8,
+    "class_distribution": {
+      "0": 4,
+      "1": 4
+    }
+  },
+  "test_set": {
+    "rows_in_baseline_split": 56962,
+    "rows_used": 8,
+    "source": "existing baseline test split",
+    "label": "QSVM sanity-check test subset \u2014 not the final evaluation protocol.",
+    "random_state": 42,
+    "class_distribution": {
+      "0": 4,
+      "1": 4
+    }
+  },
+  "timing_seconds": {
+    "kernel_construction": 0.0016753330128267407,
+    "training_kernel_matrix": 0.054186582972761244,
+    "qsvc_training": 0.05229737499030307,
+    "inference": 0.11343591701006517
+  },
+  "kernel_matrix": {
+    "shape": [
+      8,
+      8
+    ],
+    "heatmap_file": "results/figures/qsvm/quantum_kernel_matrix.png"
+  },
+  "metrics": {
+    "pr_auc": 0.6791666666666667,
+    "roc_auc": 0.75,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75,
+    "specificity": 0.75,
+    "false_positive_rate": 0.25,
+    "confusion_matrix": {
+      "true_negative": 3,
+      "false_positive": 1,
+      "false_negative": 1,
+      "true_positive": 3
+    },
+    "kernel_matrix_time_seconds": 0.054186582972761244,
+    "training_time_seconds": 0.05229737499030307,
+    "inference_time_seconds": 0.11343591701006517
+  },
+  "prediction_file": "results/json/qsvm_sanity_predictions.json",
+  "total_runtime_seconds": 1.0539561249897815,
+  "limitations": [
+    "This is a sanity check using very small training and test subsets.",
+    "QSVM sanity-check test subset \u2014 not the final evaluation protocol.",
+    "It is not a full-dataset QSVM experiment and does not support a quantum-advantage claim.",
+    "The run is noiseless and uses StatevectorSampler; no Aer or hardware noise is included."
+  ]
+}

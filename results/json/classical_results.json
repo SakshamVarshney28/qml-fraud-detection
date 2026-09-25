@@ -1,0 +1,206 @@
+{
+  "primary_metric": "pr_auc (average precision)",
+  "threshold_policy": "Native model predictions; no threshold selected using test labels.",
+  "preprocessing": {
+    "dataset_path": "data/raw/creditcard.csv",
+    "target_column": "Class",
+    "time_column": "Time",
+    "feature_columns": [
+      "Time",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17",
+      "V18",
+      "V19",
+      "V20",
+      "V21",
+      "V22",
+      "V23",
+      "V24",
+      "V25",
+      "V26",
+      "V27",
+      "V28",
+      "Amount"
+    ],
+    "feature_count": 30,
+    "amount_handling": {
+      "column": "Amount",
+      "method": "StandardScaler with all numerical baseline features",
+      "fit_scope": "training features only"
+    },
+    "scaling": {
+      "transformer": "StandardScaler",
+      "columns": [
+        "Time",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10",
+        "V11",
+        "V12",
+        "V13",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "Amount"
+      ],
+      "fit_scope": "X_train only",
+      "uses_target_labels": false
+    },
+    "split": {
+      "strategy": "stratified_random_baseline",
+      "test_size": 0.2,
+      "random_state": 42,
+      "shuffle": true,
+      "stratify_target": true,
+      "train_rows": 227845,
+      "test_rows": 56962,
+      "train_class_distribution": {
+        "0": 227451,
+        "1": 394
+      },
+      "test_class_distribution": {
+        "0": 56864,
+        "1": 98
+      }
+    },
+    "time_preservation": {
+      "original_time_retained_in_raw_train_and_test": true,
+      "future_temporal_protocol": "Use a separate chronological, non-shuffled split."
+    },
+    "leakage_prevention": [
+      "The split is created before scaler fitting.",
+      "StandardScaler is fitted only on X_train.",
+      "X_test is transformed only after fitting; it is never passed to fit.",
+      "Neither y_train nor y_test is passed to preprocessing.",
+      "All non-target columns are retained; no feature selection is performed."
+    ]
+  },
+  "models": {
+    "logistic_regression": {
+      "pr_auc": 0.7189705771419241,
+      "roc_auc": 0.9720834996210077,
+      "precision": 0.06097560975609756,
+      "recall": 0.9183673469387755,
+      "f1": 0.11435832274459974,
+      "specificity": 0.9756260551491277,
+      "false_positive_rate": 0.024373944850872256,
+      "confusion_matrix": {
+        "true_negative": 55478,
+        "false_positive": 1386,
+        "false_negative": 8,
+        "true_positive": 90
+      },
+      "training_time_seconds": 0.16914454201469198,
+      "inference_time_seconds": 0.0015764579875394702,
+      "fit_warnings": [],
+      "fit_status": null,
+      "model_configuration": {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "max_iter": 1000,
+        "random_state": 42,
+        "solver": "lbfgs"
+      }
+    },
+    "rbf_svm": {
+      "pr_auc": 0.4777797521079116,
+      "roc_auc": 0.9731911370344424,
+      "precision": 0.3217391304347826,
+      "recall": 0.7551020408163265,
+      "f1": 0.45121951219512196,
+      "specificity": 0.9972566122678672,
+      "false_positive_rate": 0.0027433877321328083,
+      "confusion_matrix": {
+        "true_negative": 56708,
+        "false_positive": 156,
+        "false_negative": 24,
+        "true_positive": 74
+      },
+      "training_time_seconds": 22.42762995796511,
+      "inference_time_seconds": 15.52804504201049,
+      "fit_warnings": [],
+      "fit_status": 0,
+      "model_configuration": {
+        "C": 1.0,
+        "cache_size": 1024,
+        "class_weight": "balanced",
+        "gamma": "scale",
+        "kernel": "rbf",
+        "max_iter": 10000,
+        "random_state": 42
+      }
+    },
+    "xgboost": {
+      "pr_auc": 0.8888909148075554,
+      "roc_auc": 0.9786806042056666,
+      "precision": 0.8736842105263158,
+      "recall": 0.8469387755102041,
+      "f1": 0.8601036269430051,
+      "specificity": 0.9997889701744513,
+      "false_positive_rate": 0.00021102982554867754,
+      "confusion_matrix": {
+        "true_negative": 56852,
+        "false_positive": 12,
+        "false_negative": 15,
+        "true_positive": 83
+      },
+      "training_time_seconds": 1.309666917019058,
+      "inference_time_seconds": 0.04075083404313773,
+      "fit_warnings": [],
+      "fit_status": null,
+      "model_configuration": {
+        "colsample_bytree": 0.8,
+        "eval_metric": "logloss",
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "n_estimators": 300,
+        "n_jobs": -1,
+        "random_state": 42,
+        "scale_pos_weight": 577.2868020304569,
+        "subsample": 0.8,
+        "tree_method": "hist"
+      }
+    }
+  },
+  "prediction_file": "results/json/classical_test_predictions.json",
+  "figure_files": [
+    "01_pr_curves.png",
+    "02_roc_curves.png",
+    "03_confusion_matrices.png",
+    "04_pr_auc_comparison.png"
+  ]
+}

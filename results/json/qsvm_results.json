@@ -1,0 +1,117 @@
+{
+  "experiment": "preliminary_reduced_subset_qsvm_midterm",
+  "status": "completed",
+  "architecture": [
+    "4 classical features",
+    "4 qubits",
+    "zz_feature_map",
+    "FidelityQuantumKernel",
+    "QSVC"
+  ],
+  "reproducibility": {
+    "random_state": 42,
+    "sampler_shots": 1024,
+    "training_subset_selection": "stratified subset from baseline X_train only",
+    "test_subset_selection": "class-balanced subset from baseline X_test only",
+    "baseline_split": "80/20 stratified random split, random_state=42"
+  },
+  "feature_reduction": {
+    "method": "training-only ANOVA F-score selector",
+    "feature_count": 4,
+    "selected_features": [
+      "V17",
+      "V14",
+      "V12",
+      "V10"
+    ],
+    "training_rows_before_subset": 227845,
+    "test_rows": 56962
+  },
+  "quantum_configuration": {
+    "feature_count": 4,
+    "qubit_count": 4,
+    "feature_map": "zz_feature_map",
+    "feature_map_reps": 1,
+    "feature_map_entanglement": "linear",
+    "feature_map_parameters": [
+      "x[0]",
+      "x[1]",
+      "x[2]",
+      "x[3]"
+    ],
+    "kernel_type": "FidelityQuantumKernel",
+    "fidelity_implementation": "ComputeUncompute",
+    "sampler": "StatevectorSampler",
+    "shots": 1024
+  },
+  "training_subset": {
+    "selection": "stratified subset selected from existing baseline training split",
+    "rows_used": 32,
+    "class_distribution": {
+      "0": 16,
+      "1": 16
+    }
+  },
+  "test_set": {
+    "rows_in_baseline_split": 56962,
+    "rows_used": 32,
+    "source": "existing baseline test split",
+    "label": "Reduced-subset preliminary QSVM experiment; QSVM sanity-check test subset \u2014 not the final evaluation protocol.",
+    "random_state": 42,
+    "class_distribution": {
+      "0": 16,
+      "1": 16
+    }
+  },
+  "kernel_workload_estimate": {
+    "training_kernel_pairs": 1024,
+    "inference_train_test_pairs_upper_bound": 1024,
+    "selection_reason": "32 training and 32 test rows balance repeatability with a small quantum-kernel workload."
+  },
+  "timing_seconds": {
+    "kernel_construction": 0.0002132499939762056,
+    "training_kernel_matrix": 0.8882613750174642,
+    "qsvc_training": 0.8542671670438722,
+    "inference": 1.7506762919947505
+  },
+  "kernel_matrix": {
+    "shape": [
+      32,
+      32
+    ],
+    "heatmap_file": "results/figures/qsvm/quantum_kernel_matrix.png"
+  },
+  "metrics": {
+    "pr_auc": 0.5384270461765968,
+    "roc_auc": 0.52734375,
+    "precision": 0.5,
+    "recall": 0.375,
+    "f1": 0.42857142857142855,
+    "specificity": 0.625,
+    "false_positive_rate": 0.375,
+    "confusion_matrix": {
+      "true_negative": 10,
+      "false_positive": 6,
+      "false_negative": 10,
+      "true_positive": 6
+    },
+    "kernel_matrix_time_seconds": 0.8882613750174642,
+    "training_time_seconds": 0.8542671670438722,
+    "inference_time_seconds": 1.7506762919947505
+  },
+  "prediction_file": "results/json/qsvm_predictions.json",
+  "figure_files": {
+    "pr_curve": "results/figures/qsvm/01_pr_curve.png",
+    "roc_curve": "results/figures/qsvm/02_roc_curve.png",
+    "confusion_matrix": "results/figures/qsvm/03_confusion_matrix.png",
+    "quantum_kernel_matrix": "results/figures/qsvm/04_quantum_kernel_matrix.png",
+    "quantum_feature_map": "results/figures/qsvm/05_quantum_feature_map.txt"
+  },
+  "total_runtime_seconds": 4.578687333036214,
+  "limitations": [
+    "This is a reduced-subset preliminary QSVM experiment using 32 training and 32 test rows.",
+    "The reduced-subset QSVM is not equivalent to full-data classical evaluation.",
+    "It is not a full-dataset QSVM experiment and does not support a quantum-advantage claim.",
+    "The run is noiseless and uses StatevectorSampler; no Aer or hardware noise is included."
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "model": "HQNN",
+  "dataset": "ULB Credit Card Fraud Detection",
+  "seed": 42,
+  "features": [
+    "Time",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "Amount"
+  ],
+  "architecture": {
+    "input_features": 30,
+    "classical_encoder": [
+      30,
+      16,
+      8,
+      4
+    ],
+    "qubits": 4,
+    "quantum_layers": 2,
+    "quantum_observables": [
+      "ZIII",
+      "IZII",
+      "IIZI",
+      "IIIZ"
+    ],
+    "classical_head": [
+      4,
+      8,
+      1
+    ]
+  },
+  "training": {
+    "negative_to_positive": 5,
+    "batch_size": 64,
+    "epochs_requested": 40,
+    "epochs_completed": 13,
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "early_stopping_patience": 7,
+    "best_validation_pr_auc": 0.9620481927710842,
+    "train_samples": 240,
+    "validation_samples": 120,
+    "train_fraud": 40,
+    "train_legitimate": 200
+  },
+  "final_test": {
+    "samples": 56962,
+    "fraud": 98,
+    "legitimate": 56864,
+    "class_prevalence": 0.0017204452090867595
+  },
+  "metrics": {
+    "pr_auc": 0.18653555275406808,
+    "roc_auc": 0.9101189698586243,
+    "precision": 0.0025592855781535026,
+    "recall": 0.9591836734693877,
+    "f1": 0.005104950172427838,
+    "specificity": 0.3557435284186832,
+    "fpr": 0.6442564715813168,
+    "tn": 20229,
+    "fp": 36635,
+    "fn": 4,
+    "tp": 94
+  },
+  "validation_metrics": {
+    "pr_auc": 0.9638888888888888,
+    "roc_auc": 0.974,
+    "precision": 0.23255813953488372,
+    "recall": 1.0,
+    "f1": 0.37735849056603776,
+    "specificity": 0.34,
+    "fpr": 0.66,
+    "tn": 34,
+    "fp": 66,
+    "fn": 0,
+    "tp": 20
+  },
+  "timing": {
+    "training_seconds": 268.5066342919599,
+    "test_inference_seconds": 83.21565904200543,
+    "test_inference_seconds_per_sample": 0.001460897774691995
+  },
+  "research_notes": [
+    "Final test set was not used for training.",
+    "Final test set retains the original ULB class imbalance.",
+    "StandardScaler was fitted only on training data.",
+    "Training population uses all available training fraud examples.",
+    "Legitimate training examples are controlled by a fixed sampling ratio.",
+    "Validation metrics are used for early stopping.",
+    "PR-AUC is the primary metric.",
+    "HQNN does not imply quantum advantage; performance must be compared experimentally.",
+    "Quantum simulation is used; these results are not hardware execution results."
+  ]
+}

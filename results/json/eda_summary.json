@@ -1,0 +1,76 @@
+{
+  "dataset_path": "data/raw/creditcard.csv",
+  "row_count": 284807,
+  "class_distribution": {
+    "0": 284315,
+    "1": 492
+  },
+  "fraud_percentage": 0.1727485630620034,
+  "amount_statistics_overall": {
+    "count": 284807,
+    "mean": 88.34961925093134,
+    "std": 250.12010924018855,
+    "min": 0,
+    "25%": 5.6,
+    "50%": 22,
+    "75%": 77.16499999999999,
+    "max": 25691.16
+  },
+  "amount_statistics_by_class": {
+    "0": {
+      "count": 284315,
+      "mean": 88.29102242231328,
+      "std": 250.10509222589243,
+      "min": 0,
+      "25%": 5.65,
+      "50%": 22,
+      "75%": 77.05,
+      "max": 25691.16
+    },
+    "1": {
+      "count": 492,
+      "mean": 122.21132113821139,
+      "std": 256.6832882977121,
+      "min": 0,
+      "25%": 1,
+      "50%": 9.25,
+      "75%": 105.89,
+      "max": 2125.87
+    }
+  },
+  "time_min": 0,
+  "time_max": 172792,
+  "time_is_monotonically_increasing": true,
+  "fraud_rate_time_bin_count": 24,
+  "time_bin_with_most_fraud_transactions": {
+    "time_bin_start": 35998.333,
+    "time_bin_end": 43198,
+    "transaction_count": 16802,
+    "fraud_count": 45,
+    "fraud_rate_percentage": 0.2678252588977503
+  },
+  "time_bin_with_highest_fraud_rate": {
+    "time_bin_start": 93595.667,
+    "time_bin_end": 100795.333,
+    "transaction_count": 3424,
+    "fraud_count": 40,
+    "fraud_rate_percentage": 1.1682242990654206
+  },
+  "generated_figures": [
+    "01_class_distribution.png",
+    "02_fraud_percentage.png",
+    "03_amount_distribution.png",
+    "04_time_distribution.png",
+    "05_fraud_transactions_over_time.png",
+    "06_amount_distribution_by_class.png",
+    "07_selected_feature_distributions.png",
+    "08_correlation_heatmap.png",
+    "09_fraud_rate_by_time_bin.png"
+  ],
+  "selected_feature_distribution_plots": [
+    "V1",
+    "V2",
+    "V3",
+    "V4"
+  ]
+}
