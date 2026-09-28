@@ -1,0 +1,41 @@
+{
+  "config": "original",
+  "best_threshold": 0.5,
+  "test_metrics": {
+    "accuracy": 0.9593908629441624,
+    "precision": 0.9659090909090909,
+    "recall": 0.8673469387755102,
+    "f1": 0.9139784946236559,
+    "roc_auc": 0.9740761169332597,
+    "pr_auc": 0.9551817954806864
+  },
+  "confusion_matrix": {
+    "TP": 85,
+    "TN": 293,
+    "FP": 3,
+    "FN": 13
+  },
+  "training_info": {
+    "training_time_seconds": 1.3671698570251465,
+    "num_inference_calls": 0,
+    "avg_inference_time": 0
+  },
+  "model_info": {
+    "num_quantum_layers": 4,
+    "num_modes": 2,
+    "measurement_config": "original",
+    "num_measurements": 2,
+    "measurement_ops": [
+      "X0",
+      "X1"
+    ],
+    "total_params": 0
+  },
+  "dataset_info": {
+    "total_samples": 1968,
+    "train_size": 1574,
+    "test_size": 394,
+    "train_fraud_pct": 25.031766200762387,
+    "test_fraud_pct": 24.873096446700508
+  }
+}
